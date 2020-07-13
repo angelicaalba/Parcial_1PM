@@ -1,3 +1,2 @@
-<?php 
-
-echo "Iniciando el examen";
+<?php
+include 'login.php';
