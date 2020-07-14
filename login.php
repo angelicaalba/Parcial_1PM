@@ -13,6 +13,7 @@
     <input type="submit" name="cancelar" value="Cancelar">
     </form>
 </div>
+
 <?php
     include "pie.inc.php";
 ?>

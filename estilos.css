@@ -1,6 +1,10 @@
+
+*{margin: 0;padding: 0;}
+
 body{
     margin: 0;
     padding: 0;
+    background:#fffffa;
 }
 .login{
     width: 500px;
@@ -14,11 +18,18 @@ body{
 input{
     display: block;
 }
-
+ 
 
 /* estilos para admin */
-
-
+ header{
+     width:100%;
+     overflow: hidden;
+     background:#252932;
+     margin-bottom: 20px ;
+ }
+header .logo{
+    color:aqua;
+}
 
 .color{
     background-color: brown;

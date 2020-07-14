@@ -1,17 +1,25 @@
 <?php
-    $ci=$_POST["ci"];
-    $clave=$_POST["clave"];
+$ci=$_POST["ci"];
+$clave=$_POST["clave"];
 
-echo $ci;
+include 'conexion.php';
 
-    // if ($ci =="jorge" && $clave =="123456") {
-    //     $_SESSION["id_user"]=100;
-    //     header("Location: saludo.php"); // Redirecionamiento directo
-    //     // echo "<a href = 'saludo.php'> Saludo</a>";
-    // }
-    // else {
-    //     header("Location: index.htm"); // Redirecionamiento directo
-    //     // echo "<a href = 'index.htm'>No valido</a>";
-    // }
-    // // Para habilitar las sesiones Linux necesista autorizar, en windows abrimos el archivo php.ini colocamos session.auto_start=0 (debes colocar la session_start();), para habilitar las sessiones, posterirmente lo reinicias apache en XAMP. Si colocas session.auto_start=1 no es necesario iniciar la sesion.
-    // ?>
+$sql="select * from usuario where ci='$ci' and clave='$clave'";
+if($resultado =mysqli_query($conn,$sql)){
+    
+    $fila = $resultado->fetch_assoc();
+    if ($fila) {
+        echo "SI consulta";
+        session_start();
+        $_SESSION["ci"]=$ci;
+        header("Location: admin2.php"); // Redirecionamiento directo
+    } else {
+        header("Location: login.php");
+    }
+
+
+}else{
+    echo "error de consulta";
+}
+
+
