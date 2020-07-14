@@ -15,8 +15,7 @@ CREATE TABLE IF NOT EXISTS `IDENTIFICADOR` (
   `color` VARCHAR(20) NULL,
   `foto` VARCHAR(20) NULL,
   `lugarres` INT NOT NULL,
-  PRIMARY KEY (`ci`),
-
+  PRIMARY KEY (`ci`)
 )
 
 
