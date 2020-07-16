@@ -1,20 +1,18 @@
 <?php
-    include "cabecera.inc.php";
-?> 
 
-<section class="py-5">
-  <div class="container py-5">
-  <?php
 //Se reciben los datos del formulario
 $color=$_POST["color"];
+include 'conexion.php';
+session_start();
+$ci=$ci=$_SESSION["ci"];
+$sql="update identificador set color='$color' where ci='$ci'";
+if(mysqli_query($conn,$sql)){
+  header("Location: admin.php"); 
+}
+else{
+  echo "error";
+}
 
-print_r($color);
 
-?>
+
     
-  </div>
-</section>
-
-<?php
-    include "pie.inc.php";
-?>
