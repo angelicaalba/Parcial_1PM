@@ -43,9 +43,9 @@ include "cabecera.inc.php";
 
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="./admin.php" class="nav-link">Bienvenidos  <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="seccion.html" class="nav-link">al </a></li>
-        <li class="nav-item"><a href="logout.php" class="nav-link">Sistema </a></li>
+        <li class="nav-item active"><a href="./admin.php" class="nav-link">Bienvenidos al sitema  <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a href="seccion.html" class="nav-link">- </a></li>
+        <li class="nav-item"><a href="logout.php" class="nav-link">Salir  </a></li>
       </ul>
     </div>
   </div>
